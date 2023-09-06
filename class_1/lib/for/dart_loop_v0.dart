@@ -10,7 +10,34 @@
 import 'dart:io';
 
 void main(){
-  DeterMineOddEven();
+  while(true){
+    print('실행하고자하는 프로그램 번호를 입력하세요.');
+    print('1.짝수홀수 \n2.음수양수 \n3.자음모음 \n4.구구단 \n5.별찍기 \n0.종료');
+    String? num = stdin.readLineSync();
+    switch(num){
+      case '1':
+        DeterMineOddEven();
+        break;
+      case '2':
+        DeterMineNegativePostiveNum();
+        break;
+      case '3':
+        DeterMineAlphabet();
+        break;
+      case '4':
+        MultiTables();
+        break;
+      case '5':
+        PrintStars();
+        break;
+      case '0':
+        print('프로그램 종료');
+        return;
+      default:
+        print('정확한 숫자를 입력하세요');
+        break;
+    }
+  }
 }
 
 void DeterMineOddEven(){
@@ -44,6 +71,41 @@ void DeterMineNegativePostiveNum(){
   }
 }
 
-void DeterMineAlphabet(){}
-void MultiTables(){}
-void PrintStars(){}
+void DeterMineAlphabet(){
+  List<String> arrayX = ['a', 'e', 'i', 'o', 'u'];
+  print('알파벳을 입력하세요.');
+  String? alp = stdin.readLineSync()!.toLowerCase();
+  if(alp.length == 1 && alp.contains(RegExp(r'[a-z]'))){
+    if(arrayX.contains(alp)){
+      print('모음입니다.');
+    }else{
+      print('자음입니다.');
+    }
+  }else{
+    print('영어 알파벳을 하나만 입력해주세요.');
+  }
+}
+void MultiTables(){
+  for(int i = 2; i < 10; i++){
+    for(int j = 1; j < 10; j++){
+      stdout.write('$i * $j = ${i * j}  ');
+      if(j == 3 || j == 6 || j == 9){
+        print('');
+      }
+    }
+  }
+}
+void PrintStars(){
+  for(int i = 0; i < 5; i++){
+    for(int j = 0; j <= i; j++){
+      stdout.write('*');
+    }
+    stdout.writeln();
+  }
+  for(int i = 0; i < 5; i++){
+    for(int j = 0; j < 5 - (i +1); j++){
+      stdout.write('*');
+    }
+    stdout.writeln();
+  }
+}
