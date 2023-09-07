@@ -16,19 +16,19 @@ void main(){
     String? num = stdin.readLineSync();
     switch(num){
       case '1':
-        DeterMineOddEven();
+        deterMineOddEven();
         break;
       case '2':
-        DeterMineNegativePostiveNum();
+        deterMineNegativePostiveNum();
         break;
       case '3':
-        DeterMineAlphabet();
+        deterMineAlphabet();
         break;
       case '4':
-        MultiTables();
+        multiTables();
         break;
       case '5':
-        PrintStars();
+        printStars();
         break;
       case '0':
         print('프로그램 종료');
@@ -40,7 +40,7 @@ void main(){
   }
 }
 
-void DeterMineOddEven(){
+void deterMineOddEven(){
   print('숫자를 입력해주세요.');
   String? number1 = stdin.readLineSync();
   if(number1 != null && !number1.contains(RegExp(r'[a-z]'))){
@@ -54,7 +54,7 @@ void DeterMineOddEven(){
     print('숫자를 입력해주세요!');
   }
 }
-void DeterMineNegativePostiveNum(){
+void deterMineNegativePostiveNum(){
   print('숫자를 입력해주세요.');
   String? number2 = stdin.readLineSync();
   if(number2 != null){
@@ -71,7 +71,7 @@ void DeterMineNegativePostiveNum(){
   }
 }
 
-void DeterMineAlphabet(){
+void deterMineAlphabet(){
   List<String> arrayX = ['a', 'e', 'i', 'o', 'u'];
   print('알파벳을 입력하세요.');
   String? alp = stdin.readLineSync()!.toLowerCase();
@@ -85,7 +85,7 @@ void DeterMineAlphabet(){
     print('영어 알파벳을 하나만 입력해주세요.');
   }
 }
-void MultiTables(){
+void multiTables(){
   for(int i = 2; i < 10; i++){
     for(int j = 1; j < 10; j++){
       stdout.write('$i * $j = ${i * j}  ');
@@ -95,17 +95,26 @@ void MultiTables(){
     }
   }
 }
-void PrintStars(){
-  for(int i = 0; i < 5; i++){
-    for(int j = 0; j <= i; j++){
+void printStars(){
+  for(int i = 0; i < 3; i++){
+    for(int j = 0; j <= 2 * i; j++){
       stdout.write('*');
     }
     stdout.writeln();
   }
-  for(int i = 0; i < 5; i++){
-    for(int j = 0; j < 5 - (i +1); j++){
+  print('------------------');
+  for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 5-(2*i) ; j++){
       stdout.write('*');
     }
     stdout.writeln();
   }
+  print('------------------');
+  for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 3; j++) {
+      stdout.write('*');
+    }
+  stdout.writeln();
+  }
+
 }
