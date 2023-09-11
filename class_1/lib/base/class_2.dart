@@ -1,4 +1,4 @@
-void main(){
+void main() {
   double doubleValue = 3.14;
   print(doubleValue);
   int intValue = doubleValue.toInt(); // 데이터 손실
@@ -24,6 +24,4 @@ void main(){
   int intValue3 = 88;
   // double doubleValue3 = intValue2 as double; // 실행 오류, 런타임 시 오류 발생
   // print(doubleValue3);
-
-
 }

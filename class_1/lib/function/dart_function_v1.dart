@@ -1,4 +1,4 @@
-void main(){
+void main() {
   printName();
   num result = add(100, -10);
   print('result : $result');
@@ -10,14 +10,13 @@ void main(){
   double height = 3;
   print(calculateCircleArea(radius));
   print(calculateRectangleArea(width, height));
-
 }
 
-void printName(){
+void printName() {
   print('My name is 홍길동');
 }
 
-int add(int num1, int num2){
+int add(int num1, int num2) {
   return num1 + num2;
 }
 
@@ -30,9 +29,10 @@ void calculateInterest(double principal, double rate, double year) {
 }
 
 // 예외처리, 방어적 코드
-double calculateCircleArea(double radius){
+double calculateCircleArea(double radius) {
   return 3.14 * radius * radius;
 }
-double calculateRectangleArea(double width, double height){
+
+double calculateRectangleArea(double width, double height) {
   return width * height;
 }
