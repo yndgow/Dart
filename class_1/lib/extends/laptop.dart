@@ -27,5 +27,6 @@ class MacBook extends Laptop{
   
 }
 void main(){
-  MacBook bok = MacBook("MacBook Pro", '스페이스그린');
+  MacBook book = MacBook("MacBook Pro", '스페이스그린');
+
 }

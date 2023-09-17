@@ -110,11 +110,32 @@ void printStars(){
     stdout.writeln();
   }
   print('------------------');
-  for(int i = 0; i < 3; i++){
-    for(int j = 0; j < 3; j++) {
+  int n = 3; // 다이아몬드의 높이 (홀수여야 합니다)
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n - i; j++) {
+      // 왼쪽 상단 공백 출력
+      stdout.write(' ');
+    }
+    for (int k = 0; k < 2 * i + 1; k++) {
+      // 다이아몬드 윗부분 별표 출력
       stdout.write('*');
     }
-  stdout.writeln();
+    // 줄 바꿈
+    print('');
+  }
+
+  for (int i = n - 2; i >= 0; i--) {
+    for (int j = 0; j < n - i; j++) {
+      // 왼쪽 하단 공백 출력
+      stdout.write(' ');
+    }
+    for (int k = 0; k < 2 * i + 1; k++) {
+      // 다이아몬드 아랫부분 별표 출력
+      stdout.write('*');
+    }
+    // 줄 바꿈
+    print('');
   }
 
 }
